@@ -1,4 +1,5 @@
-const socket = io("https://realtime-location-tracker-production-cfbd.up.railway.app");
+const socket = io();
+
 
 
 socket.on("connect", () => {
@@ -49,6 +50,4 @@ socket.on("user-disconnect", (id) => {
     delete markers[id];
   }
 } );
-
-
 
